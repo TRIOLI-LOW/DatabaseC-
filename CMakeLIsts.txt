@@ -1,0 +1,13 @@
+cmake_minimum_required (VERSION 3.2)
+
+set(PostgreSQL_ADDITIONAL_VERSIONS "15")
+
+project(home_work)
+
+add_executable(home_work main.cpp)
+
+add_subdirectory("C:\\Work\\libpqxx-7.8.1" libpqxx-build)
+
+target_compile_features(home_work PRIVATE cxx_std_17)
+
+target_link_libraries (home_work PRIVATE pqxx)
